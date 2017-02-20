@@ -8,3 +8,10 @@ exports.handler = function(event, context) {
   context.succeed(res);
 
 }
+
+exports.handler1 = function(event, context) {
+  var res = v1.getLoad();
+  console.log(res);
+  context.succeed(res);
+
+}
