@@ -1,8 +1,10 @@
-//var v1= require("../api/load")
+
 var AWS = require('aws-sdk');
+var v1= require('./api/load.js');
 
 exports.handler = function(event, context) {
-
-  context.succeed('hello');
+  var res = v1.getLoad();
+  console.log(res);
+  context.succeed(res);
 
 }
