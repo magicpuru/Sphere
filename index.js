@@ -8,7 +8,7 @@ exports.handler = function(event, context) {
 var rp = v1.getLoad();
   rp(v1.options)
       .then(function (body) {
-          context.succeed(body);
+          context.succeed(JSON.parse(body));
       })
       .catch(function (err) {
         context.succeed(err);
